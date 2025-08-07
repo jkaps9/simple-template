@@ -52,22 +52,15 @@
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #about-us-sbs,
-  #about-us-sbsr {
+  #side-by-side,
+  #side-by-side-reverse {
     .container {
       flex-flow: row;
       justify-content: space-between;
       gap: calc(52 / 16 * 1rem);
     }
 
-    .image-container {
-      font-size: min(1.2vw, 1em);
-      flex: none;
-    }
-
-    .content {
-      margin: 0;
-    }
+    
   }
 }
 
