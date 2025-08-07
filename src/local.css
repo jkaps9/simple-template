@@ -27,61 +27,26 @@
       gap: clamp(3rem, 6vw, 4rem);
     }
 
-    .content {
-      /* set text align to left if content needs to be left aligned */
-      text-align: left;
-      width: 100%;
-      max-width: calc(542 / 16 * 1rem);
-      display: flex;
-      flex-direction: column;
-      /* centers content horizontally, set to flex-start to left align */
-      align-items: center; 
+   .left-content,
+    .right-content {
+	    /* set text align to left if content needs to be left aligned */
+	    text-align: left;
+	    width: 100%;
+	    display: flex;
+	    flex-direction: column;
+	    /* centers content horizontally, 
+	     * set to flex-start to left align */
+	    align-items: center;
+	    /*TODO: Check if max width is necessary */
+	    max-width: calc(542 / 16 * 1rem);
+
+	    /*FOR VISUAL DEV PURPOSES ONLY*/
+	    background-color: #aaaaCC;
+	    border: 1px solid gray;
     }
 
-    .image-container {
-      /* scaling the font size with the view width */
-      font-size: min(2.31vw, 0.7em);
-      /* using ems so we can use font size to scale the whole section */
-      width: calc(631 / 16 * 1em);
-      height: calc(636 / 16 * 1em);
-      position: relative;
-
-      .picture {
-        border-radius: calc(24 / 16 * 1em);
-        /* clips img tag corners */
-        overflow: hidden;
-        position: absolute;
-        display: block;
-
-        img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          /* makes image act like a background image */
-          object-fit: cover;
-        }
-      }
-
-      .picture1 {
-        width: calc(522 / 16 * 1em);
-        height: calc(581 / 16 * 1em);
-        left: 0;
-        top: 0;
-      }
-
-      .picture2 {
-        width: calc(414 / 16 * 1em);
-        height: calc(400 / 16 * 1em);
-        background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-        /* 6px - 12px */
-        border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-        right: 0;
-        bottom: 0;
-      }
-    }
+    /*Add specific styling for content below*/
+    
   }
 }
 
