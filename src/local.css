@@ -14,6 +14,8 @@
 @media only screen and (min-width: 0rem) {
   #side-by-side,
   #side-by-side-reverse {
+	  background-color: transparent;
+
     padding: var(--section-padding);
 
     .container {
@@ -68,19 +70,8 @@
 /*  SIDE BY SIDE REVERSE */
 /* ********************  */
 @media only screen and (min-width: 0rem) {
-  #about-us-sbsr {
+  #side-by-side-reverse {
     background-color: #f7f7f7;
-
-    .image-container {
-      .picture1 {
-        left: auto;
-        right: 0;
-      }
-      .picture2 {
-        right: auto;
-        left: 0;
-      }
-    }
   }
 }
 
