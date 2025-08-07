@@ -12,8 +12,8 @@
 /* ******************* */
 
 @media only screen and (min-width: 0rem) {
-  #about-us-sbs,
-  #about-us-sbsr {
+  #side-by-side,
+  #side-by-side-reverse {
     padding: var(--section-padding);
 
     .container {
