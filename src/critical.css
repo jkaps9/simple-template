@@ -15,13 +15,18 @@
     padding-top: clamp(9rem, 25.95vw, 18.75rem);
   }
 
+  #hero.service-overlap {
+    /* 130px - 450px */
+    padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
+  }
+
   #hero {
     /* Centers button */
     text-align: center;
     /* 144px - 300px - leaving extra space for the navigation */
     padding: clamp(4.5rem, 13vw, 9rem) calc(16 / 16 * 1rem) 0;
     /* 130px - 450px */
-    padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
+    padding-bottom: clamp(6rem, 15.5vw, 14rem);
     position: relative;
     z-index: 1;
     /* Prevents white rectangle pseudos from overlapping the sections below */
@@ -135,6 +140,18 @@
 /* ******************* */
 
 @media only screen and (min-width: 0rem) {
+  #hero.service-overlap + #services {
+    /* give a higher z index than the hero so it can sit on top */
+    z-index: 10;
+
+    & > .container > .card-container {
+      /* negative margin pulls it up on top of the hero section */
+      /* -46px to -76px - we're calculating whatever clamp is and multiplying by -1
+            to make the value negative since clamp doesn't work with negative values */
+      margin-top: calc(clamp(5rem, 13vw, 4.75rem) * -1);
+    }
+  }
+
   #services {
     /* 40px - 100px */
     padding: 0 calc(16 / 16 * 1em) clamp(2.5rem, 7.9vw, 6.25rem)
@@ -142,15 +159,11 @@
     position: relative;
     /* give a higher z index than the hero so it can sit on top */
     z-index: 10;
-
     .card-container {
       width: 100%;
       max-width: calc(465 / 16 * 1rem);
       margin: 0 auto 0;
-      /* negative margin pulls it up on top of the hero section */
-      /* -46px to -76px - we're calculating whatever clamp is and multiplying by -1
-            to make the value negative since clamp doesn't work with negative values */
-      margin-top: calc(clamp(5rem, 13vw, 4.75rem) * -1);
+
       /* 40px - 60px top and bottom, 16px - 44px left & right */
       padding: clamp(2.5rem, 4.7vw, 3.75rem) clamp(1rem, 5.3vw, 2.75rem);
       box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
@@ -215,12 +228,18 @@
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #services {
-    .card-container {
-      max-width: calc(784 / 16 * 1rem);
+  #hero.service-overlap + #services {
+    & > .container > .card-container {
       /* -76px to -320px - we're calculating whatever clamp is and multiplying by -1
                to make the value negative since clamp doesn't work with negative values */
       margin-top: calc(clamp(4.75rem, 20vw, 20rem) * -1);
+    }
+  }
+
+  #services {
+    .card-container {
+      max-width: calc(784 / 16 * 1rem);
+
       display: flex;
       justify-content: space-between;
       align-items: center;
