@@ -11,11 +11,15 @@
 /*        HERO         */
 /* ******************* */
 @media only screen and (min-width: 0rem) {
+  header.fixed + main > #hero {
+    padding-top: clamp(9rem, 25.95vw, 18.75rem);
+  }
+
   #hero {
     /* Centers button */
     text-align: center;
     /* 144px - 300px - leaving extra space for the navigation */
-    padding: clamp(9rem, 25.95vw, 18.75rem) calc(16 / 16 * 1rem) 0;
+    padding: clamp(4.5rem, 13vw, 9rem) calc(16 / 16 * 1rem) 0;
     /* 130px - 450px */
     padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
     position: relative;
