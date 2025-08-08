@@ -114,7 +114,7 @@
 
 /* Desktop - 1300px (To make image background parallax) */
 @media only screen and (min-width: 81.25rem) {
-  #hero {
+  #hero.parallax {
     background: url("./assets/images/landing.jpg");
     background-size: cover;
     background-position: center;
