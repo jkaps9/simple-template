@@ -14,7 +14,7 @@
 @media only screen and (min-width: 0rem) {
   #side-by-side,
   #side-by-side-reverse {
-	  background-color: transparent;
+    background-color: transparent;
 
     padding: var(--section-padding);
 
@@ -29,24 +29,23 @@
       gap: clamp(3rem, 6vw, 4rem);
     }
 
-   .left-content,
+    .left-content,
     .right-content {
-	    /* set text align to left if content needs to be left aligned */
-	    text-align: left;
-	    width: 100%;
-	    display: flex;
-	    flex-direction: column;
-	    /* centers content horizontally, 
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, 
 	     * set to flex-start to left align */
-	    align-items: center;
-	    /*TODO: Check if max width is necessary */
-	    max-width: calc(542 / 16 * 1rem);
+      align-items: center;
+      /*TODO: Check if max width is necessary */
+      max-width: calc(542 / 16 * 1rem);
 
-	    /*FOR VISUAL DEV PURPOSES ONLY*/
-	    background-color: #aaaaCC;
-	    border: 1px solid gray;
+      /*FOR VISUAL DEV PURPOSES ONLY*/
+      background-color: #aaaacc;
+      border: 1px solid gray;
     }
-    
   }
 }
 
@@ -72,10 +71,9 @@
 }
 
 @media only screen and (min-width: 64rem) {
-  #about-us-sbsr {
+  #side-by-side-reverse {
     .container {
       flex-flow: row-reverse;
     }
   }
 }
-
