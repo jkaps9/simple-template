@@ -96,7 +96,7 @@ body {
 }
 
 .hide-on-desktop {
-	display:block;
+  display: block;
 }
 
 /* Desktop Utility Classes */
@@ -749,15 +749,13 @@ header {
 
     .container {
       width: 100%;
-      /* reset on tablet */
-      max-width: calc(550 / 16 * 1rem);
+      max-width: calc(540 / 16 * 1rem);
       margin: auto;
       display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      column-gap: calc(88 / 16 * 1rem);
-      row-gap: calc(32 / 16 * 1rem);
+      flex-direction: column;
+      align-items: center;
+      /* 32px - 48px */
+      gap: clamp(2rem, 4.5vw, 3rem);
     }
 
     .logo-container {
@@ -771,6 +769,7 @@ header {
       width: clamp(13.125rem, 8vw, 15rem);
       height: auto;
       display: block;
+      margin: 0 auto;
       /* 28px - 44px */
       margin-bottom: clamp(1.75rem, 4.17vw, 2.75rem);
     }
@@ -778,54 +777,44 @@ header {
     .logo-img {
       width: 100%;
       height: auto;
-
-      &.dark {
-        display: none;
-      }
     }
 
-    .text {
-      color: var(--color-body-text-light);
-      margin-bottom: calc(16 / 16 * 1rem);
-    }
-
-    .social {
-      display: inline-flex;
-      flex-direction: column;
-      justify-content: flex-start;
+    .social-container {
+      width: 45%;
+      display: flex;
+      justify-content: space-between;
       gap: calc(12 / 16 * 1rem);
-      position: absolute;
-      top: 0;
-      right: 0;
     }
 
     .social-link {
       width: calc(24 / 16 * 1rem);
       height: calc(24 / 16 * 1rem);
-      background-color: var(--color-highlight);
-      border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
       z-index: 1;
-      transition:
-        transform 0.3s,
-        background-color 0.3s;
+      transition: transform 0.3s;
 
       &:hover {
-        background-color: var(--dark);
         transform: translateY(-0.1875rem);
       }
     }
 
     .social-img {
-      height: calc(13 / 16 * 1rem);
+      height: 100%;
       width: auto;
       display: block;
     }
 
     /* Navigation Links */
+    .link-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+    }
+
     .nav {
       padding: 0;
       margin: 0;
@@ -890,7 +879,7 @@ header {
     .contact {
       margin: 0;
       padding: 0;
-      width: 35%;
+      width: 45%;
     }
 
     .contact-li {
@@ -917,6 +906,15 @@ header {
     .address {
       font-size: calc(16 / 16 * 1rem);
       margin-bottom: calc(20 / 16 * 1rem);
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .text {
+      color: var(--color-highlight-light);
     }
   }
 }
